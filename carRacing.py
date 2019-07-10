@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
+        MainWindow.setEnabled(True)
         MainWindow.resize(1366, 768)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -36,6 +37,14 @@ class Ui_MainWindow(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(300, 670, 101, 101))
         self.pushButton_2.setObjectName("pushButton_2")
+        self.restartButton = QtWidgets.QPushButton(self.centralwidget)
+        self.restartButton.setEnabled(True)
+        self.restartButton.setGeometry(QtCore.QRect(460, 690, 16, 16))
+        font = QtGui.QFont()
+        font.setPointSize(72)
+        self.restartButton.setFont(font)
+        self.restartButton.setStyleSheet("color: rgb(255, 0, 0);")
+        self.restartButton.setObjectName("restartButton")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -46,15 +55,16 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
+        self.restartButton.setText(_translate("MainWindow", "PushButton"))
 
 import images
 
-if __name__ == "__main__":
+if __name__=="__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
+
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
