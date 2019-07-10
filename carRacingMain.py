@@ -5,13 +5,10 @@ import threading
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-<<<<<<< HEAD
+
 GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-=======
-GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUB_UP)
-GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUB_UP)
->>>>>>> a4776086ae9f6ba2722625d29f0748eec56ab058
+
 
 xStat = 20
 x1Stat = 20
