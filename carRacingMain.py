@@ -58,6 +58,8 @@ def updating(self):
                                 print('{} is WINNER!'.format(winner))
                                 self.restartButton.setText('A Player is Winner!')
                                 self.restartButton.setGeometry(QtCore.QRect(0, 0, 1371, 671))
+                                while GPIO.input(18) == False:
+                                        pass
                 if input_state1 == False:
                         x1Stat += 30
                         self.frame_2.setGeometry(QtCore.QRect(x1Stat, 435, 200, 97))
@@ -66,6 +68,8 @@ def updating(self):
                                 print('{} is WINNER!'.format(winner))
                                 self.restartButton.setText('B Player is Winner!')
                                 self.restartButton.setGeometry(QtCore.QRect(0, 0, 1371, 671))
+                                while GPIO.input(18) == False:
+                                        pass
 
 
 Ui_MainWindow.event = event
